@@ -1,21 +1,21 @@
 const User = require('./user')
 
 describe('user class', () => {
-            const testuser = new User(12234, 'mike', 17, 'mike@gmail.com')
+    const testuser = new User('mike', 17, 'mike@gmail.com', 2121)
 
-            test('has name', () => {
-                expect().toBe()
-            })
+    test('has name', () => {
+        expect(testuser.name).toBe('mike')
+    })
 
-            test('', () => {
-                expect().toBe()
-            })
+    test('has age', () => {
+        expect(testuser.age).toEqual(17)
+    })
 
-            test('', () => {
-                expect().toEqual()
-            })
+    test('has @', () => {
+        expect(testuser.emailaddress.split('@')[1]).toEqual('gmail.com')
+    })
 
-            test('', () => {
-                    expect().toEqual()
-                }
-            })
+    test('has userId', () => {
+        expect(testuser.id).toEqual(2121)
+    })
+})
